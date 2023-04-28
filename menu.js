@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const menuMobile = document.querySelector('.menu-mobile');
 const mobileMenu = document.querySelector('.mobile-menu');
 const shoppingCart = document.querySelector('.navbar-shopping-cart');
-const cartMenu = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const cardsContainer = document.querySelector('.cards-container')
 
 menuEmail.addEventListener('click', toggleDesktopMenu );
@@ -17,9 +17,9 @@ function  toggleDesktopMenu () {
 
 
 function toggleMobileMenu () {
-  const isShoppingCartOpen = !cartMenu.classList.contains('inactive');
+  const isShoppingCartOpen = !shoppingCartContainer.classList.contains('inactive');
   if(isShoppingCartOpen){
-    cartMenu.classList.add('inactive');
+    shoppingCartContainer.classList.add('inactive');
   }
   mobileMenu.classList.toggle('inactive');
 }
@@ -30,7 +30,7 @@ function toggleMenuCart () {
   if(isMenuMobileOpen){
     mobileMenu.classList.add('inactive');
   }
-  cartMenu.classList.toggle('inactive');
+  shoppingCartContainer.classList.toggle('inactive');
 }
 
 
